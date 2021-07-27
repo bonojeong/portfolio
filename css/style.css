@@ -1,52 +1,72 @@
-html {
-  font-size: 16px;
-}
-
 body {
   color: #4D4D4D;
   background: #DCD5CD;
   width: 100%;
-  margin: 0 40px;
   height: auto;
+  font-family: Centaur;
 }
 
 body .wrap {
-  width: 100%;
+  width: 95%;
   height: auto;
+  margin: 0 auto;
 }
 
 body .wrap header {
   background: #DCD5CD;
   position: fixed;
-  width: 100%;
-  height: 200px;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 95%;
+  height: 150px;
   border-bottom: 5px solid #4D4D4D;
+  z-index: 1;
 }
 
 body .wrap header h1 {
-  font-size: 7rem;
+  font-family: Stencil;
+  font-size: 6rem;
   text-align: center;
-  line-height: 200px;
+  line-height: 150px;
 }
 
 body .wrap main {
   width: 100%;
   height: auto;
-  padding-top: 200px;
+  padding-top: 150px;
+  padding-bottom: 100px;
 }
 
 body .wrap main .day {
+  font-family: Stencil;
   width: 100%;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   border-top: 3px solid #707070;
   border-bottom: 3px solid #707070;
   margin-top: 20px;
+}
+
+body .wrap main .day .location {
+  width: 50%;
+  text-align: center;
+  overflow: hidden;
+}
+
+body .wrap main .day .location .location_text {
+  display: block;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 body .wrap main .day .selectColor {
@@ -56,4 +76,304 @@ body .wrap main .day .selectColor {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+body .wrap main .day .selectColor div {
+  padding-left: 10px;
+}
+
+body .wrap main .intro {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .wrap main .intro .intro1_video {
+  width: 49%;
+}
+
+body .wrap main .intro .intro1_video video {
+  width: 100%;
+}
+
+body .wrap main .intro .intro1_text {
+  width: 49%;
+  font-size: 1rem;
+}
+
+body .wrap main .intro .intro1_text .profile {
+  font-size: 1.25rem;
+  padding-bottom: 20px;
+}
+
+body .wrap main .intro .intro1_text .profile h1 {
+  padding-bottom: 20px;
+}
+
+body .wrap main .intro .intro1_text .profile p {
+  padding-bottom: 10px;
+}
+
+body .wrap main .intro .intro1_text > p span {
+  padding-top: 1rem;
+}
+
+body .wrap main .intro .intro1_text span {
+  display: block;
+}
+
+body .wrap main .skills {
+  border-top: 3px solid #707070;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 100px;
+  padding-top: 50px;
+}
+
+body .wrap main .skills h1 {
+  padding-left: 10px;
+  margin-bottom: 20px;
+  font-size: 3rem;
+  position: relative;
+}
+
+body .wrap main .skills h1::before {
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: block;
+  content: "";
+  height: 2.5rem;
+  width: 5px;
+  background-color: #4D4D4D;
+}
+
+body .wrap main .skills .skill_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  height: auto;
+}
+
+body .wrap main .skills .skill_list > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
+  height: auto;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+body .wrap main .skills .skill_list > div img {
+  width: 20%;
+  margin-bottom: 20px;
+}
+
+body .wrap main .skills .skill_list > div h4 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+body .wrap main .projects {
+  width: 100%;
+  height: auto;
+  border-top: 3px solid #707070;
+  padding-top: 100px;
+}
+
+body .wrap main .projects > h1 {
+  padding-left: 10px;
+  margin-bottom: 20px;
+  font-size: 3rem;
+  position: relative;
+}
+
+body .wrap main .projects > h1::before {
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: block;
+  content: "";
+  height: 2.5rem;
+  width: 5px;
+  background-color: #4D4D4D;
+}
+
+body .wrap main .projects .project_list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #707070;
+  border-bottom: 1px solid #707070;
+  margin-bottom: 100px;
+}
+
+body .wrap main .projects .project_list .project_text {
+  position: relative;
+  width: 40%;
+}
+
+body .wrap main .projects .project_list .project_text h1 {
+  font-size: 1.75rem;
+  padding-bottom: 30px;
+}
+
+body .wrap main .projects .project_list .project_text > p {
+  padding-bottom: 10px;
+}
+
+body .wrap main .projects .project_list .project_text .what {
+  width: 70%;
+}
+
+body .wrap main .projects .project_list .project_image {
+  width: 60%;
+  overflow: hidden;
+  position: relative;
+}
+
+body .wrap main .projects .project_list .project_image .moreBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #DCD5CD;
+  font-size: 2rem;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .wrap main .projects .project_list .project_image .moreBtn::after {
+  display: block;
+  content: "";
+  width: 100%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  background: #DCD5CD;
+  height: 3px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .wrap main .projects .project_list .project_image .project_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1000px;
+  opacity: 0.2;
+  background: #000;
+  display: block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .wrap main .projects .project_list .project_image img {
+  width: 100%;
+}
+
+body .wrap main .projects .project_list .project_image:hover .project_bg {
+  opacity: 0.7;
+}
+
+body .wrap main .projects .project_list .project_image:hover .moreBtn {
+  opacity: 1;
+}
+
+body .wrap main .projects .project_list .project_image:hover .moreBtn::after {
+  width: 100%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+body .wrap main .projects .project1 {
+  border-top: 3px solid #707070;
+}
+
+body .wrap footer {
+  background: #DCD5CD;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 95.1%;
+  height: 100px;
+  border-top: 5px solid #4D4D4D;
+  z-index: 1;
+}
+
+body .wrap footer div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .wrap footer div p {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+body .wrap footer div p span {
+  font-size: 1rem;
+  display: block;
 }
