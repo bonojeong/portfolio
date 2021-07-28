@@ -1,11 +1,11 @@
 @charset "UTF-8";
 body {
-  color: #4D4D4D;
   background: #DCD5CD;
   width: 100%;
   height: auto;
   font-family: Centaur;
   cursor: default;
+  color: #4D4D4D;
 }
 
 body .wrap {
@@ -131,7 +131,7 @@ body .wrap main .intro .intro1_video .control img {
   display: none;
 }
 
-body .wrap main .intro .intro1_video:hover .play {
+body .wrap main .intro .intro1_video:hover .video_btn {
   display: block;
 }
 
@@ -411,6 +411,22 @@ body .wrap footer div p span {
 
 body .wrap footer div p:hover {
   text-decoration: line-through;
+}
+
+body .wrapblue {
+  color: #738AA9;
+}
+
+body .wrapgreen {
+  color: #7EA886;
+}
+
+body .wrapyellow {
+  color: #A7AC72;
+}
+
+body .wrapbrown {
+  color: #A78F77;
 }
 
 @media screen and (max-width: 1023px) {

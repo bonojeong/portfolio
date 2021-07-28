@@ -1,10 +1,11 @@
 body{
-    color: #4D4D4D;
+
     background: #DCD5CD;
     width: 100%;
     height: auto;
     font-family: Centaur;
     cursor: default;
+    color: #4D4D4D;
     .wrap{
         width: 95%;
         height: auto;
@@ -74,6 +75,7 @@ body{
                     overflow: hidden;
                     video {
                         width: 100%;
+                        
                     }
                     .video_bg{
                         top: 0;
@@ -94,7 +96,7 @@ body{
                             display: none;
                         }
                     }
-                    &:hover .play{
+                    &:hover .video_btn{
                         display: block;
                     }
                 }
@@ -303,6 +305,18 @@ body{
                 }
             }
         }
+    }
+    .wrapblue{
+        color: #738AA9;
+    }
+    .wrapgreen{
+        color: #7EA886;
+    }
+    .wrapyellow{
+        color: #A7AC72;
+    }
+    .wrapbrown{
+        color: #A78F77;
     }
 }
 @media screen and (max-width:1023px) {
