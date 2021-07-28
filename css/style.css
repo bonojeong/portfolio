@@ -1,9 +1,11 @@
+@charset "UTF-8";
 body {
   color: #4D4D4D;
   background: #DCD5CD;
   width: 100%;
   height: auto;
   font-family: Centaur;
+  cursor: default;
 }
 
 body .wrap {
@@ -21,6 +23,7 @@ body .wrap header {
           transform: translateX(-50%);
   width: 95%;
   height: 150px;
+  line-height: 150px;
   border-bottom: 5px solid #4D4D4D;
   z-index: 1;
 }
@@ -29,7 +32,6 @@ body .wrap header h1 {
   font-family: Stencil;
   font-size: 6rem;
   text-align: center;
-  line-height: 150px;
 }
 
 body .wrap main {
@@ -55,18 +57,13 @@ body .wrap main .day {
   border-top: 3px solid #707070;
   border-bottom: 3px solid #707070;
   margin-top: 20px;
+  padding: 5px 0;
 }
 
 body .wrap main .day .location {
   width: 50%;
   text-align: center;
   overflow: hidden;
-}
-
-body .wrap main .day .location .location_text {
-  display: block;
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
 }
 
 body .wrap main .day .selectColor {
@@ -79,7 +76,13 @@ body .wrap main .day .selectColor {
 }
 
 body .wrap main .day .selectColor div {
-  padding-left: 10px;
+  width: 25px;
+  margin-left: 10px;
+}
+
+body .wrap main .day .selectColor div img {
+  width: 100%;
+  cursor: pointer;
 }
 
 body .wrap main .intro {
@@ -100,10 +103,36 @@ body .wrap main .intro {
 
 body .wrap main .intro .intro1_video {
   width: 49%;
+  position: relative;
+  overflow: hidden;
 }
 
 body .wrap main .intro .intro1_video video {
   width: 100%;
+}
+
+body .wrap main .intro .intro1_video .video_bg {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.3;
+}
+
+body .wrap main .intro .intro1_video .control img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 10%;
+  display: none;
+}
+
+body .wrap main .intro .intro1_video:hover .play {
+  display: block;
 }
 
 body .wrap main .intro .intro1_text {
@@ -257,11 +286,12 @@ body .wrap main .projects .project_list .project_text {
 }
 
 body .wrap main .projects .project_list .project_text h1 {
-  font-size: 1.75rem;
+  font-size: 2.5rem;
   padding-bottom: 30px;
 }
 
 body .wrap main .projects .project_list .project_text > p {
+  font-size: 1.25rem;
   padding-bottom: 10px;
 }
 
@@ -369,11 +399,103 @@ body .wrap footer div {
 }
 
 body .wrap footer div p {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   text-align: center;
+  text-decoration: none;
 }
 
 body .wrap footer div p span {
-  font-size: 1rem;
+  font-size: 1.25rem;
   display: block;
+}
+
+body .wrap footer div p:hover {
+  text-decoration: line-through;
+}
+
+@media screen and (max-width: 1023px) {
+  /* 타블렛 */
+  html {
+    font-size: 12px;
+  }
+  html body .wrap header {
+    height: 100px;
+    line-height: 100px;
+  }
+  html body .wrap main {
+    padding-top: 100px;
+  }
+  html body .wrap main .intro {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  html body .wrap main .intro .intro1_video {
+    margin-bottom: 20px;
+  }
+  html body .wrap main .intro .intro1_text {
+    width: 100%;
+    text-align: center;
+  }
+  html body .wrap main .intro .intro1_text .profile {
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 8px;
+  }
+  html body .wrap main .day .papernum {
+    display: none;
+  }
+  html body .wrap main .projects .project_list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 20px 0;
+    margin-bottom: 0px;
+  }
+  html body .wrap main .projects .project_list .project_text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  html body .wrap main .projects .project_list .project_text h1 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  html body .wrap footer {
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  html {
+    font-size: 6px;
+  }
+  html body .wrap main .day .papernum {
+    display: none;
+  }
+  html body .wrap main .day .selectColor div {
+    width: 15px;
+    margin-left: 5px;
+  }
+  html body .wrap main .skills {
+    padding-bottom: 50px;
+  }
 }

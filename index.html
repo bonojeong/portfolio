@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -17,7 +18,13 @@
             <section class="day">
                 <p class="papernum">NO. 58,011</p>
                 <p class="location">
-                    <span class="location_text">ULSAN, MONDAY, JULY 26,2021</span>
+                    <marquee behavior="scroll" direction="left">
+                        <span class="where">ULSAN</span>, 
+                        <span class="days"></span>, 
+                        <span class="month"></span> 
+                        <span class="date"></span>,
+                        <span class="year"></span>
+                    </marquee>
                 </p>
                 <div class="selectColor">
                     <p>COLOR :</p>
@@ -38,6 +45,10 @@
             <section class="intro">
                 <div class="intro1_video">
                     <video src="video/intro_video.mp4" autoplay muted loop="loop"></video>
+                    <div class="video_bg"></div>
+                    <div class="control">
+                        <a href="#"><img src="image/play.png" alt="play" class="play"></a>
+                    </div>
                 </div>
                 <div class="intro1_text">
                     <div class="profile">
@@ -55,9 +66,8 @@
                         6개월간의 국비과정을 밟아오면서 마크업과 반응형 웹
                         및 javascript를 이용한 동적 웹페이지를 만들고, 개인적인
                         프로젝트도 만들면서 역량을 쌓아왔습니다.
-                        <span>영단어프로젝트를 진행했을 때 데이터를 이용해 게임을
-                        만드는 것에 흥미가 생겨 퍼블리셔 뿐만아니라 프론트
-                        엔드에도 관심이 생겨 개발공부도 같이 병행 할 예정입
+                        <span>더 나아가 퍼블리셔 뿐만아니라 프론트
+                        엔드 쪽으로도 개발공부도 같이 병행 할 예정입
                         니다. 부족한 부분이 있으면 꾸준히 계속 채워나가면서
                         성장하는 모습, 기대에 부흥하는 모습을 보여드리겠습
                         니다. 감사합니다 !</span>
@@ -87,7 +97,9 @@
                     <div class="skill3">
                         <img src="image/js_logo.png" alt="js_logo">
                         <h4>JAVA SCRIPT</h4>
-                        <p></p>
+                        <p>
+                            슬라이드, 스크롤 위치에 따른 인터렉션 등 여러가지 동적인 화면 구현 가능
+                        </p>
                     </div>
                 </div>
             </section>
@@ -96,7 +108,7 @@
                 <div class="project1 project_list">
                     <div class="project_text">
                         <h1>English-Word</h1>
-                        <p class="term">· 프로젝트 기간 : 2021.07.12 ~ 2021.07.24</p>
+                        <p class="term">· 프로젝트 기간 : 2021-07-12 ~ 2021-07-24</p>
                         <p class="person">· 개발인원 : 1명</p>
                         <p class="program">· 사용언어: HTML5, CSS3, JS, JSON</p>
                         <p class="mine">· 기여도 : 100%</p>
@@ -117,7 +129,7 @@
                 <div class="project2 project_list">
                     <div class="project_text">
                         <h1>CGV 리디자인</h1>
-                        <p class="term">· 프로젝트 기간 : 2021.05.26 ~ 2021.07.11</p>
+                        <p class="term">· 프로젝트 기간 : 2021-05-25 ~ 2021-07-16</p>
                         <p class="person">· 개발인원: 3인</p>
                         <p class="program">· 사용언어: HTML5, CSS3, JS, Jqurey</p>
                         <p class="mine">· 기여도: 30% (퍼블리싱 담당)</p>
@@ -142,15 +154,14 @@
                 </div>
                 <div class="project3 project_list"> 
                     <div class="project_text">
-                        <h1>CGV 리디자인</h1>
-                        <p class="term">· 프로젝트 기간 : 2021.05.26 ~ 2021.07.11</p>
-                        <p class="person">· 개발인원: 3인</p>
+                        <h1>몽블랑 리디자인</h1>
+                        <p class="term">· 프로젝트 기간 : 2021-07-02 ~ 2021-07-12</p>
+                        <p class="person">· 개발인원: 1인</p>
                         <p class="program">· 사용언어: HTML5, CSS3, JS, Jquery</p>
-                        <p class="mine">· 기여도: 30% (퍼블리싱 담당)</p>
-                        <p class="what">· 디자이너1명 퍼블리셔 2명으로 팀을 구성해서 
-                            CGV홈페이지를 리디자인을 해봤습니다.
-                            혼자가 아닌 같이 일함으로서 동료와 함께
-                            일하는 법을 익혔습니다.
+                        <p class="mine">· 기여도: 100%</p>
+                        <p class="what">· 
+                            Jquery를 이용해 원페이지 기능을 구현했습니다.
+                            원페이지 말고는 전부 바닐라JS로 만들었습니다.
                         </p>
                     </div>
                     <div class="project_image">

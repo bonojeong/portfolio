@@ -4,6 +4,7 @@ body{
     width: 100%;
     height: auto;
     font-family: Centaur;
+    cursor: default;
     .wrap{
         width: 95%;
         height: auto;
@@ -16,13 +17,13 @@ body{
             transform: translateX(-50%);
             width: 95%;
             height: 150px;
+            line-height: 150px;
             border-bottom: 5px solid #4D4D4D;
             z-index: 1;
             h1{
                 font-family: Stencil;
                 font-size: 6rem;
                 text-align: center;
-                line-height: 150px;
             }
         }
         main {
@@ -40,20 +41,22 @@ body{
                 border-top: 3px solid #707070;
                 border-bottom: 3px solid #707070;
                 margin-top: 20px;
+                padding: 5px 0;
                 .location {
                     width: 50%;
                     text-align: center;
                     overflow: hidden;
-                    .location_text{
-                        display: block;
-                        transform: translateX(0%);
-                    }
                 }
                 .selectColor {
                     display: flex;
                     align-items: center;
                     div{
-                        padding-left: 10px;
+                        width: 25px;
+                        margin-left: 10px;
+                        img{
+                            width: 100%;
+                            cursor: pointer;
+                        }
                     }
                 }
             }
@@ -67,8 +70,32 @@ body{
                 justify-content: space-between;
                 .intro1_video{
                     width: 49%;
+                    position: relative;
+                    overflow: hidden;
                     video {
                         width: 100%;
+                    }
+                    .video_bg{
+                        top: 0;
+                        left: 0;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background: #000;
+                        opacity: 0.3;
+                    }
+                    .control{
+                        img{
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 10%;
+                            display: none;
+                        }
+                    }
+                    &:hover .play{
+                        display: block;
                     }
                 }
                 .intro1_text{
@@ -178,10 +205,11 @@ body{
                         position: relative;
                         width: 40%;
                         h1 {
-                            font-size: 1.75rem;
+                            font-size: 2.5rem;
                             padding-bottom: 30px;
                         }
                         >p {
+                            font-size: 1.25rem;
                             padding-bottom: 10px;
                         }
                         .what{
@@ -262,11 +290,109 @@ body{
                 display: flex;
                 justify-content: space-between;
                 p{
-                    font-size: 1.25rem;
+                    font-size: 1.5rem;
                     text-align: center;
+                    text-decoration: none;
                     span{
-                        font-size: 1rem;
+                        font-size: 1.25rem;
                         display: block;
+                    }
+                    &:hover {
+                        text-decoration: line-through;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:1023px) {
+    /* 타블렛 */
+    html{
+        font-size: 12px;
+        body{
+            .wrap{
+                header{
+                    height: 100px;
+                    line-height: 100px;
+                }
+                main{
+                    padding-top: 100px;
+                    .intro{
+                        flex-direction: column;
+                        justify-content: center;
+                        .intro1_video{
+                            margin-bottom: 20px;
+                        }
+                        .intro1_text{
+                            width: 100%;
+                            text-align: center;
+                            .profile{
+                                padding-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+    
+@media screen and (max-width:767px) {
+    html{
+        font-size: 8px;
+        body{
+            .wrap{
+                main{
+                    .day{
+                        .papernum{
+                            display: none;
+                        }
+                    }
+                    .projects{
+                        .project_list{
+                            flex-direction: column-reverse;
+                            padding: 20px 0;
+                            margin-bottom:0px;
+                            .project_text{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                text-align: center;
+                                width: 100%;
+                                h1 {
+                                    padding-top: 20px;
+                                    padding-bottom: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+                footer{
+                    height: 60px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:479px) {
+    html{
+        font-size: 6px;
+        body{
+            .wrap{
+                main{
+                    .day{
+                        .papernum{
+                            display: none;
+                        }
+                        .selectColor{
+                            div{
+                                width: 15px;
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                    .skills{
+                        padding-bottom: 50px;
                     }
                 }
             }
