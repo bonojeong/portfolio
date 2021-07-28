@@ -225,6 +225,11 @@ body .wrap main .skills .skill_list > div {
   height: auto;
   font-size: 1.5rem;
   text-align: center;
+  opacity: 0;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-transform: translateY(20%);
+          transform: translateY(20%);
 }
 
 body .wrap main .skills .skill_list > div img {
@@ -235,6 +240,16 @@ body .wrap main .skills .skill_list > div img {
 body .wrap main .skills .skill_list > div h4 {
   font-size: 2rem;
   margin-bottom: 10px;
+}
+
+body .wrap main .skills .skill_list .skill2 {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+body .wrap main .skills .skill_list .skill3 {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
 }
 
 body .wrap main .projects {
@@ -411,22 +426,6 @@ body .wrap footer div p span {
 
 body .wrap footer div p:hover {
   text-decoration: line-through;
-}
-
-body .wrapblue {
-  color: #738AA9;
-}
-
-body .wrapgreen {
-  color: #7EA886;
-}
-
-body .wrapyellow {
-  color: #A7AC72;
-}
-
-body .wrapbrown {
-  color: #A78F77;
 }
 
 @media screen and (max-width: 1023px) {

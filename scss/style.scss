@@ -162,6 +162,9 @@ body{
                         height: auto;
                         font-size: 1.5rem;
                         text-align: center;
+                        opacity: 0;
+                        transition: 0.8s;
+                        transform: translateY(20%);
                         img {
                             width: 20%;
                             margin-bottom: 20px
@@ -170,6 +173,12 @@ body{
                             font-size: 2rem;
                             margin-bottom: 10px
                         };
+                    }
+                    .skill2{
+                        transition-delay: 0.4s;
+                    }
+                    .skill3{
+                        transition-delay: 0.8s;
                     }
                 }
             }
@@ -305,18 +314,6 @@ body{
                 }
             }
         }
-    }
-    .wrapblue{
-        color: #738AA9;
-    }
-    .wrapgreen{
-        color: #7EA886;
-    }
-    .wrapyellow{
-        color: #A7AC72;
-    }
-    .wrapbrown{
-        color: #A78F77;
     }
 }
 @media screen and (max-width:1023px) {
