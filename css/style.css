@@ -314,6 +314,10 @@ body .wrap main .projects .project_list .project_text .what {
   width: 70%;
 }
 
+body .wrap main .projects .project_list .project_text .whatIdid span {
+  display: block;
+}
+
 body .wrap main .projects .project_list .project_image {
   width: 60%;
   overflow: hidden;
