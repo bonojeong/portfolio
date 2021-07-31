@@ -43,6 +43,9 @@ body{
                 border-bottom: 3px solid #707070;
                 margin-top: 20px;
                 padding: 5px 0;
+                >h2 {
+                    display: none;
+                }
                 .location {
                     width: 50%;
                     text-align: center;
@@ -187,7 +190,7 @@ body{
                 height: auto;
                 border-top: 3px solid #707070;
                 padding-top: 100px;
-                >h1{
+                >h2{
                     padding-left: 10px;
                     margin-bottom: 20px;
                     font-size: 3rem;

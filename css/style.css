@@ -60,6 +60,10 @@ body .wrap main .day {
   padding: 5px 0;
 }
 
+body .wrap main .day > h2 {
+  display: none;
+}
+
 body .wrap main .day .location {
   width: 50%;
   text-align: center;
@@ -259,14 +263,14 @@ body .wrap main .projects {
   padding-top: 100px;
 }
 
-body .wrap main .projects > h1 {
+body .wrap main .projects > h2 {
   padding-left: 10px;
   margin-bottom: 20px;
   font-size: 3rem;
   position: relative;
 }
 
-body .wrap main .projects > h1::before {
+body .wrap main .projects > h2::before {
   position: absolute;
   left: 0%;
   top: 50%;
