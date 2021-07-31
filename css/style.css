@@ -293,6 +293,9 @@ body .wrap main .projects .project_list {
   border-top: 1px solid #707070;
   border-bottom: 1px solid #707070;
   margin-bottom: 100px;
+  opacity: 0;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
 }
 
 body .wrap main .projects .project_list .project_text {

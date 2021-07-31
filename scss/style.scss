@@ -212,6 +212,8 @@ body{
                     border-top: 1px solid #707070;
                     border-bottom: 1px solid #707070;
                     margin-bottom: 100px;
+                    opacity: 0;
+                    transition: 0.8s;
                     .project_text {
                         position: relative;
                         width: 40%;

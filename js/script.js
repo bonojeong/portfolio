@@ -84,10 +84,15 @@ brownFont.addEventListener('click',function(){
 let winH = window.innerHeight
 let skills = document.querySelector('.skills')
 let skill = document.querySelectorAll('.skill')
+let project_list = document.querySelectorAll('.project_list')
 // skill부분 viewport에 따른 인터렉션 효과 ! 
 function skillsAnimation(){
-    window.addEventListener('scroll',checkPosition);
-    function checkPosition(){
+    window.addEventListener('scroll',function(){
+        skillCheckPosition()
+        projectCheckPosition()
+    });
+    //skill 부분
+    function skillCheckPosition(){
         let skillTop = skills.getBoundingClientRect().top;
         let skillBottom = skills.getBoundingClientRect().bottom;
         if(winH > skillTop + 500 && skillBottom > -100){
@@ -102,5 +107,19 @@ function skillsAnimation(){
             })
         }
     }
+    //project부분
+    //각각의 리스트의 높이에 따라 효과 주기
+    function projectCheckPosition(){
+        let project_listPos
+        project_list.forEach( i => {
+            project_listPos = i.getBoundingClientRect().top
+            //반응형에도 작동할수있게 project_listPos값이 viewport height의 30%가 되면 작동 
+            if(winH > project_listPos + winH * 0.3 ){
+                i.style.opacity = '1'
+            }
+        })
+    }
 }
 skillsAnimation()
+
+
