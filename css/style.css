@@ -70,6 +70,10 @@ body .wrap main .day .location {
   overflow: hidden;
 }
 
+body .wrap main .day .location p {
+  display: inline-block;
+}
+
 body .wrap main .day .selectColor {
   display: -webkit-box;
   display: -ms-flexbox;

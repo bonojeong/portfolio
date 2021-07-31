@@ -50,6 +50,9 @@ body{
                     width: 50%;
                     text-align: center;
                     overflow: hidden;
+                    p{
+                        display: inline-block;
+                    }
                 }
                 .selectColor {
                     display: flex;
